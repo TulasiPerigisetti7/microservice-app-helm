@@ -161,11 +161,7 @@ tolerations: []
 affinity: {}
 
 env:
-  - name: AUTH_API_ADDRESS
-    value: http://auth-api:8081
-  - name: PORT
-    value: "8080"
-  - name: TODOS_API_ADDRESS
-    value: http://todos-api:8082
-  - name: ZIPKIN_URL
-    value: http://zipkin:9411/api/v2/spans
+  AUTH_API_ADDRESS: "http://auth-api:8081"
+  PORT: "8080"
+  TODOS_API_ADDRESS: "http://todos-api:8082"
+  ZIPKIN_URL: "http://zipkin:9411/api/v2/spans"
