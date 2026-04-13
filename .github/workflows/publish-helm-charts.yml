@@ -35,7 +35,7 @@ jobs:
 
 
   publish:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: build-package   # 👈 ONLY runs if build succeeds
 
     steps:
