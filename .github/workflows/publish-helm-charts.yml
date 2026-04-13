@@ -34,7 +34,7 @@ jobs:
 
   publish:
     runs-on: self-hosted
-    needs: build-package   # 👈 ONLY runs if build succeeds
+    needs: build-package   # ONLY runs if build succeeds
 
     steps:
       # - name: Debug connectivity
