@@ -39,6 +39,14 @@ jobs:
     needs: build-package   # 👈 ONLY runs if build succeeds
 
     steps:
+      - name: Debug connectivity
+        run: |
+          echo "Testing VM IP"
+          curl -v http://10.0.2.15:9091/artifactory/api/system/ping || true
+
+          echo "Testing localhost"
+          curl -v http://localhost:9091/artifactory/api/system/ping || true
+
       - name: Download packaged charts
         uses: actions/download-artifact@v4
         with:
