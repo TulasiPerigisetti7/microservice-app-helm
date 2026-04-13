@@ -16,14 +16,14 @@ jobs:
 
       - name: Lint charts
         run: |
-          for chart in HelmCharts/*; do
+          for chart in helm-charts/*; do
             helm lint "$chart"
           done
 
       - name: Package charts
         run: |
           mkdir -p dist
-          for chart in HelmCharts/*; do
+          for chart in helm-charts/*; do
             helm package "$chart" -d dist
           done
 
